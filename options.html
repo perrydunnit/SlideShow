@@ -1,0 +1,30 @@
+<html ng-app ng-csp=''>
+<head>
+    <link rel="stylesheet" href="/css/blueprint/screen.css" type="text/css" media="screen, projection" />
+    <style>
+        li { background: lightblue; }
+        li:nth-child(odd) { background: white; }
+
+
+    </style>
+</head>
+<body>
+<div data-ng-controller='OptionsCtrl'>
+    <form ng-submit='addUrl()'>
+
+        <input type='text' ng-model='newUrl' />
+        <input class='btn-primary' type='submit' value='Add url' />
+
+    </form>
+    The following URLs will be cycled through:
+
+    <ul>
+        <li ng-repeat='url in urls'><button ng-click='removeUrl(url)'>Delete</button> {{url.href}} <span ng-if='{{url.isImage}}'>An Image!</span></li>
+
+    </ul>       <br/>
+
+</div>
+<script type='text/javascript' src='/scripts/angular.min.js'></script>
+<script type='text/javascript' src='/scripts/optionsCtrl.js'></script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+{
+    "manifest_version": 2,
+
+    "name": "IFrame Slide show",
+    "description": "This extension loads a hello world page.",
+    "version": "1.0",
+    "options_page": "options.html",
+    "app": {
+        "launch": {
+            "local_path": "slideShow.html",
+            "container": "panel"
+        }
+    },
+    "permissions": [
+        "storage",
+        "file:///*"
+    ]
+}
